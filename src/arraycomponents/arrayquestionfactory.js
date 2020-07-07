@@ -25,7 +25,7 @@ export class ArrayQuestionFactory {
   }
 
   getQuestion(props) {
-    console.log("getquestion props", props);
+    //console.log("getquestion props", props);
 
     //console.log("getQuestion loops 2D", this.loops, this.twod);
 
@@ -53,7 +53,7 @@ export class ArrayQuestionFactory {
 
     const random = Math.floor(Math.random() * questionTypes.length);
     const question = new questionTypes[random](props);
-    console.log("creating question in factory", question);
+    //console.log("creating question in factory", question);
     //const question = new arrayQuestion1(props);
     //const question = new arrayQuestion1b(props);
     //const question = new arrayQuestion2();

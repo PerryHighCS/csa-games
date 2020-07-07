@@ -23,6 +23,7 @@ function stringQuestion1loop(props) {
   const equalsChar =
     Math.random() > 0.5 || upperBound === lowerBound ? "=" : "";
   sq.text = [
+    'String word = "' + currentWord + '";',
     'Strings s = "";',
     "for(int i=" +
       lowerBound +
@@ -33,7 +34,7 @@ function stringQuestion1loop(props) {
       "; i+=" +
       increment +
       ")",
-    "s += s.substring(i, i+1); ",
+    "s += word.substring(i, i+1); ",
   ];
   if (equalsChar === "=") {
     ++upperBound;

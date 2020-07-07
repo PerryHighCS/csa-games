@@ -37,6 +37,17 @@
   }
 }
 
+.App {
+  display: inline-block; /* make div only as large as needed */
+  border: 5px;
+  border-style: solid;
+  margin: 30px;
+}
+
+.Outer {
+  text-align: center;
+}
+
 .navbar-nav.navbar-center {
   position: absolute;
   left: 50%;

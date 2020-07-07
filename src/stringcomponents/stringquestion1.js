@@ -17,7 +17,7 @@ function stringQuestion1(props) {
   sq.rows = 1;
   const index = Math.floor(Math.random() * sq.buttonStates[0].length);
   sq.buttonStates[0][index] = 1;
-  sq.text = [`s.substring(${index}, ${index + 1});`];
+  sq.text = [`"${currentWord}".substring(${index}, ${index + 1});`];
   return sq;
 }
 

@@ -2,7 +2,7 @@ import React from "react";
 
 export class QuestionBaseClass {
   constructor(props, rows, cols) {
-    console.log("quesiton base constructor props", props);
+    //console.log("quesiton base constructor props", props);
     this.props = props;
     this.disabled = [];
     this.buttonStates = [];
@@ -39,7 +39,7 @@ export class QuestionBaseClass {
 
     console.log("newStates ", this.buttonStates);
     if (newState === 3) {
-      this.incorrect();
+      this.incorrect(false);
       return;
     }
     if (this.allCorrect()) {
@@ -55,8 +55,8 @@ export class QuestionBaseClass {
     this.props.updateGrid();
   };
 
-  incorrect() {
-    console.log("incorrect");
+  incorrect(timedOut) {
+    console.log("incorrect timeout = ", timedOut);
     for (let row = 0; row < this.buttonStates.length; ++row) {
       for (let col = 0; col < this.buttonStates[0].length; ++col) {
         this.disabled[row][col] = true; // disable all the buttons
@@ -69,7 +69,7 @@ export class QuestionBaseClass {
 
     this.props.updateGrid();
 
-    this.props.gameOver();
+    this.props.gameOver(timedOut);
   }
 
   allCorrect() {
@@ -88,10 +88,10 @@ export class QuestionBaseClass {
   }
 
   displayQuestion() {
-    console.log("display question: ", this.text);
+    //console.log("display question: ", this.text);
     const array = [];
     for (let i = 0; i < this.text.length; ++i) {
-      array.push(<h4 key={i}>{this.text[i]}</h4>);
+      array.push(<h5 key={i}>{this.text[i]}</h5>);
     }
     return array;
   }

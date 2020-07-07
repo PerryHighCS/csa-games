@@ -4,11 +4,6 @@ import * as StringConstants from "./stringconstants";
 import { StringQuestionFactory } from "./stringquestionfactory";
 
 const STRINGOPTIONS = [
-  {
-    id: StringConstants.TIMEROPTIONID,
-    label: "Timer",
-    checked: StringConstants.DEFAULTTIMEROPTION,
-  },
   { id: StringConstants.LOOPSOPTIONID, label: "Loops", checked: false },
 ];
 
@@ -19,7 +14,6 @@ class StringGameEngine extends Component {
     this.state = {
       options: STRINGOPTIONS,
       qf: StringQuestionFactory,
-      timer: StringConstants.DEFAULTTIMEROPTION,
       labels: StringConstants.DEFAULTLABELSOPTION,
       maxtime: StringConstants.MAXTIME,
       addtime: StringConstants.ADDTIME,
@@ -31,15 +25,12 @@ class StringGameEngine extends Component {
     // timer and label options are handled here.
     // other options are used by the question factory
     switch (id) {
-      case StringConstants.TIMEROPTIONID:
-        let timer = checked;
-        this.setState({ timer, options });
-        return;
       case StringConstants.LABELSOPTIONID:
         let labels = checked;
         this.setState({ labels, options });
         return;
       default:
+        console.log("unknown option in string game engine");
         break;
     }
     this.setState({ options });
@@ -54,7 +45,6 @@ class StringGameEngine extends Component {
           title={StringConstants.STRINGGAMETITLE}
           options={this.state.options}
           handleOptions={this.handleOptions}
-          timer={this.state.timer}
           labels={this.state.labels}
           qf={this.state.qf}
           maxtime={this.state.maxtime}

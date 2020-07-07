@@ -5,11 +5,6 @@ import * as ArrayConstants from "./arrayconstants";
 
 const ARRAYOPTIONS = [
   {
-    id: ArrayConstants.TIMEROPTIONID,
-    label: "Timer",
-    checked: ArrayConstants.DEFAULTTIMEROPTION,
-  },
-  {
     id: ArrayConstants.LABELSOPTIONID,
     label: "Labels",
     checked: ArrayConstants.DEFAULTLABELSOPTION,
@@ -20,16 +15,27 @@ const ARRAYOPTIONS = [
 
 class ArrayGameEngine extends Component {
   state = {};
+
   constructor(props) {
     super(props);
+
+    let labels = this.getLabelChecked();
+    console.log("array game constructor labels=", labels);
     this.state = {
       options: ARRAYOPTIONS,
       qf: ArrayQuestionFactory,
-      timer: ArrayConstants.DEFAULTTIMEROPTION,
-      labels: ArrayConstants.DEFAULTLABELSOPTION,
+      labels: labels,
       maxtime: ArrayConstants.MAXTIME,
       addtime: ArrayConstants.ADDTIME,
     };
+  }
+
+  getLabelChecked() {
+    //console.log("getLabelIndex returning");
+    for (let i = 0; i < ARRAYOPTIONS.length; ++i) {
+      if (ARRAYOPTIONS[i].id === ArrayConstants.LABELSOPTIONID)
+        return ARRAYOPTIONS[i].checked;
+    }
   }
 
   handleOptions = (options, id, checked) => {
@@ -37,15 +43,12 @@ class ArrayGameEngine extends Component {
     // timer and label options are handled here.
     // other options are used by the question factory
     switch (id) {
-      case ArrayConstants.TIMEROPTIONID:
-        let timer = checked;
-        this.setState({ timer, options });
-        return;
       case ArrayConstants.LABELSOPTIONID:
         let labels = checked;
         this.setState({ labels, options });
         return;
       default:
+        console.log("unknown option in array game engine");
         break;
     }
     this.setState({ options });
@@ -60,7 +63,6 @@ class ArrayGameEngine extends Component {
           title={ArrayConstants.ARRAYGAMETITLE}
           options={this.state.options}
           handleOptions={this.handleOptions}
-          timer={this.state.timer}
           labels={this.state.labels}
           qf={this.state.qf}
           maxtime={this.state.maxtime}

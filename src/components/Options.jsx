@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Checkbox from "../components/CheckBox";
+import "../css/Options.css";
 
 class Options extends Component {
   handleOption = (id, checked) => {
@@ -21,7 +22,7 @@ class Options extends Component {
     // console.log(options);
 
     return (
-      <div>
+      <div className="options">
         {options.map((option) => (
           <Checkbox
             key={option.id}

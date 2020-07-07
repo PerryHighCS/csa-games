@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "./css/App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import ArrayGameEngine from "./arraycomponents/ArrayGameEngine";
 import StringGameEngine from "./stringcomponents/StringGameEngine";
@@ -26,62 +26,63 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
-        <nav className="navbar navbar-nav navbar-dark bg-primary m-1">
-          <h2>
-            <i>CSA Games Beta 1.0</i>
-          </h2>
-          <div>
-            <button
-              autoFocus
-              id={AppConstants.ARRAYGAMEINDEX}
-              onClick={this.handleButton}
-              className="btn btn-sm btn-primary m-1"
-            >
-              Arrays
-            </button>
-            <button
-              onClick={this.handleButton}
-              id={AppConstants.STRINGGAMEINDEX}
-              className="btn btn-sm btn-primary m-1"
-            >
-              Strings
-            </button>
-            <button
-              onClick={this.handleButton}
-              id={AppConstants.RELATIONALGAMEINDEX}
-              className="btn btn-sm btn-primary m-1"
-            >
-              Relational
-            </button>
-            <button
-              onClick={this.handleButton}
-              id={AppConstants.BOOLEANGAMEINDEX}
-              disabled={true}
-              className="btn btn-sm btn-primary m-1"
-            >
-              Boolean
-            </button>
-            <button
-              onClick={this.handleButton}
-              id={AppConstants.MIXEDGAMEINDEX}
-              disabled={true}
-              className="btn btn-sm btn-primary m-1"
-            >
-              Mixed
-            </button>
-          </div>
-        </nav>
+      <div className="Outer">
+        <div className="App">
+          <nav className="navbar navbar-nav navbar-dark bg-primary m-1">
+            <h2>
+              <i>CSA Games Beta 1.0</i>
+            </h2>
+            <div>
+              <button
+                autoFocus
+                id={AppConstants.ARRAYGAMEINDEX}
+                onClick={this.handleButton}
+                className="btn btn-sm btn-primary m-1"
+              >
+                Arrays
+              </button>
+              <button
+                onClick={this.handleButton}
+                id={AppConstants.STRINGGAMEINDEX}
+                className="btn btn-sm btn-primary m-1"
+              >
+                Strings
+              </button>
+              <button
+                onClick={this.handleButton}
+                id={AppConstants.RELATIONALGAMEINDEX}
+                className="btn btn-sm btn-primary m-1"
+              >
+                Relational
+              </button>
+              <button
+                onClick={this.handleButton}
+                id={AppConstants.BOOLEANGAMEINDEX}
+                disabled={true}
+                className="btn btn-sm btn-primary m-1"
+              >
+                Boolean
+              </button>
+              <button
+                onClick={this.handleButton}
+                id={AppConstants.MIXEDGAMEINDEX}
+                disabled={true}
+                className="btn btn-sm btn-primary m-1"
+              >
+                Mixed
+              </button>
+            </div>
+          </nav>
 
-        {this.state.currentGame}
+          {this.state.currentGame}
 
-        {/* <RelationalGameEngine /> */}
-        <footer className="page-footer font-small blue pt-4">
-          <div className="footer-copyright text-center py-3">
-            copyright: c.sarkar report bugs, questions, comments, suggestions to
-            csarkar373 @gmail.com
-          </div>
-        </footer>
+          {/* <RelationalGameEngine /> */}
+          <footer className="page-footer font-small blue pt-4">
+            <div className="footer-copyright text-center py-3">
+              {AppConstants.DISCLAIMER}
+            </div>
+          </footer>
+        </div>
       </div>
     );
   }

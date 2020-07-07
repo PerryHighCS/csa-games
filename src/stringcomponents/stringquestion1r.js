@@ -22,7 +22,7 @@ function stringQuestion1r(props) {
   sq.buttonStates[0][lowerBound] = 1;
   sq.buttonStates[0][upperBound] = 1;
 
-  sq.text = [`s.substring(${lowerBound}, ${upperBound + 1});`];
+  sq.text = [`"${currentWord}".substring(${lowerBound}, ${upperBound + 1});`];
   return sq;
 }
 

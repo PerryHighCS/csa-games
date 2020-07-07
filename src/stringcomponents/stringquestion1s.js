@@ -20,7 +20,7 @@ function stringQuestion1s(props) {
   sq.buttonStates[0][lowerBound] = 1;
   sq.buttonStates[0][currentWord.length - 1] = 1;
 
-  sq.text = [`s.substring(${lowerBound});`];
+  sq.text = [`"${currentWord}".substring(${lowerBound});`];
   return sq;
 }
 

@@ -27,15 +27,22 @@ class Timer extends Component {
       return;
     }
 
-    const id = setTimeout(this.decrementTimer, 1000);
+    let id = 0;
+    let timerOn = false;
+    // currently, timer does not start until first question answered
+    console.log("timer autostart = ", this.props.autoStart);
+    if (this.props.autoStart) {
+      id = setTimeout(this.decrementTimer, 1000);
+      timerOn = true;
+    }
 
     this.setState({
       count: this.props.maxtime,
-      timerOn: true,
+      timerOn: timerOn,
       id: id,
     });
 
-    console.log("Timer did mount");
+    console.log("Timer did mount ");
   }
 
   decrementTimer = () => {
@@ -53,13 +60,26 @@ class Timer extends Component {
     }
   };
 
-  resetTimer = () => this.componentDidMount();
+  resetTimer = () => {
+    console.log("restarting timer");
+    // do not create multiple timers
+    if (!this.state.timerOn) {
+      const id = setTimeout(this.decrementTimer, 1000);
+    }
+    this.setState({
+      count: this.props.maxtime,
+      timerOn: true,
+      // id: id,
+    });
+  };
 
-  addToTimer = () =>
-    this.setState({ count: this.state.count + this.props.addtime });
+  addToTimer = () => {
+    if (this.state.timerOn)
+      this.setState({ count: this.state.count + this.props.addtime });
+  };
 
   stopTimer = () => {
-    console.log("cancelling timer");
+    console.log("cancelling timer ");
     this.setState({ count: 0 });
   };
 

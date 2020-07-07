@@ -5,14 +5,14 @@ class AnswerGrid extends Component {
   // eslint-disable-next-line
   constructor(props) {
     super(props);
-    console.log("answer grid constructor", this.props);
+    // console.log("answer grid constructor", this.props);
   }
 
   makeButtons() {
     const rows = this.props.question.buttonStates.length;
     const cols = this.props.question.buttonStates[0].length;
 
-    console.log("make buttons display values", this.props);
+    //console.log("make buttons display values", this.props);
 
     let array = [];
     let buttonKey = 0;
@@ -38,7 +38,7 @@ class AnswerGrid extends Component {
   }
 
   render() {
-    console.log("rendering answergrid");
+    //console.log("rendering answergrid");
     return this.makeButtons();
   }
 }

@@ -5,11 +5,6 @@ import * as RelationalConstants from "./relationalconstants";
 
 const RELATIONALOPTIONS = [
   {
-    id: RelationalConstants.TIMEROPTIONID,
-    label: "Timer",
-    checked: RelationalConstants.DEFAULTTIMEROPTION,
-  },
-  {
     id: RelationalConstants.COMPOUNDOPTIONID,
     label: "Compound",
     checked: RelationalConstants.DEFAULTCOMPOUNDSOPTION,
@@ -28,7 +23,6 @@ class RelationalGameEngine extends Component {
     this.state = {
       options: RELATIONALOPTIONS,
       qf: RelationalQuestionFactory,
-      timer: RelationalConstants.DEFAULTTIMEROPTION,
       compound: RelationalConstants.DEFAULTCOMPOUNDSOPTION,
       maxtime: RelationalConstants.MAXTIME,
       addtime: RelationalConstants.ADDTIME,
@@ -40,15 +34,12 @@ class RelationalGameEngine extends Component {
     // timer and label options are handled here.
     // other options are used by the question factory
     switch (id) {
-      case RelationalConstants.TIMEROPTIONID:
-        let timer = checked;
-        this.setState({ timer, options });
-        return;
       case RelationalConstants.COMPOUNDOPTIONID:
         let compound = checked;
         this.setState({ compound, options });
         return;
       default:
+        console.log("unknown option in relational game engine");
         break;
     }
     this.setState({ options });

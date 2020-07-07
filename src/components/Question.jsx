@@ -10,7 +10,7 @@ class Question extends Component {
     let question = this.props.qf.getQuestion(props);
     this.state = { question };
     // this.handleButton = this.handleButton.bind(this);
-    console.log("question constructor", this.state);
+    //console.log("question constructor", this.state);
   }
 
   restart(qf) {
@@ -32,11 +32,11 @@ class Question extends Component {
 
   timeout() {
     console.log("question timeout");
-    this.state.question.incorrect();
+    this.state.question.incorrect(true);
   }
 
   render() {
-    console.log("question rerender ", this.state.question);
+    // console.log("question rerender ", this.state.question);
     return (
       <div>
         {this.state.question.displayQuestion()}

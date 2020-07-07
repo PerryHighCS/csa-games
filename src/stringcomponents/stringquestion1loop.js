@@ -1,0 +1,50 @@
+import QuestionBaseClass from "../components/questionbaseclass";
+//import * as StringConstants from "./stringconstants";
+
+function stringQuestion1loop(props) {
+  //pick a word from the word pool at random
+  //const wordIndex = StringConstants.WORDPOOL.length;
+  // const currentWord =
+  // StringConstants.WORDPOOL[Math.floor(Math.random() * wordIndex)];
+  const currentWord = "ABCDEFGH";
+  // question will have 1 row and 8 columns
+  const sq = new QuestionBaseClass(props, 1, currentWord.length);
+  // adjust the button display values
+  for (let i = 0; i < currentWord.length; ++i) {
+    sq.displayValues[0][i] = currentWord.substring(i, i + 1);
+  }
+  //console.log("array question base class", sq);
+  sq.pointValue = 3;
+  sq.rows = 1;
+  const increment = sq.randomIncrementOrDecrement();
+  const lowerBound = Math.floor((Math.random() * currentWord.length) / 2);
+  let upperBound =
+    Math.floor(Math.random() * (currentWord.length - lowerBound)) + lowerBound;
+  const equalsChar =
+    Math.random() > 0.5 || upperBound === lowerBound ? "=" : "";
+  sq.text = [
+    'Strings s = "";',
+    "for(int i=" +
+      lowerBound +
+      "; i <" +
+      equalsChar +
+      " " +
+      upperBound +
+      "; i+=" +
+      increment +
+      ")",
+    "s += s.substring(i, i+1); ",
+  ];
+  if (equalsChar === "=") {
+    ++upperBound;
+  }
+  let lastIndex = 0;
+  for (let i = lowerBound; i < upperBound; i += increment) {
+    lastIndex = i;
+  }
+  sq.buttonStates[0][lowerBound] = 1;
+  sq.buttonStates[0][lastIndex] = 1;
+  return sq;
+}
+
+export default stringQuestion1loop;

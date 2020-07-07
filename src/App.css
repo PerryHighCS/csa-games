@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+.navbar-nav.navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+h2 {
+  color: white;
+}
+
+.footer-copyright {
+  color: blue;
+  font-size: 0.5em;
+}

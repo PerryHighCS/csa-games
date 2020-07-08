@@ -82,6 +82,9 @@ class GameEngine extends Component {
 
   gameOver = (timedOut) => {
     console.log("game over timeout = ", timedOut);
+    // user loses this game but switches to new type of game ...
+    // do not allow old score to stay
+    this.myScoreKeeperRef.current.resetGlobalScore();
     if (!timedOut) this.playSound(wrongAnswer);
     if (this.getOptionValue(AppConstants.TIMEROPTIONID)) {
       this.myTimerRef.current.stopTimer();

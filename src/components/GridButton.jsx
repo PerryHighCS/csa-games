@@ -1,14 +1,6 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-
-const buttonColors = [
-  "btn-primary", // unselected=false
-  // "btn-info",
-  "btn-primary", // unselected-true
-  "btn-success", // selected-true
-  "btn-danger", // selected-false
-  "btn-warning", // partially-correct
-];
+import * as AppConstants from "../util/appconstants";
 
 class GridButton extends Component {
   state = {};
@@ -20,7 +12,7 @@ class GridButton extends Component {
   getButtonClasses() {
     const buttonClasses = "btn btn-sm m-2 ";
     //console.log(buttonClasses + buttonColors[this.props.value]);
-    return buttonClasses + buttonColors[this.props.value];
+    return buttonClasses + AppConstants.BUTTONCOLORS[this.props.value];
   }
 
   buttonClicked() {

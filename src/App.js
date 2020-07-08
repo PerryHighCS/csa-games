@@ -30,7 +30,7 @@ class App extends React.Component {
         <div className="App">
           <nav className="navbar navbar-nav navbar-dark bg-primary m-1">
             <h2>
-              <i>CSA Games Beta 1.0</i>
+              <i>{AppConstants.APPTITLE}</i>
             </h2>
             <div>
               <button

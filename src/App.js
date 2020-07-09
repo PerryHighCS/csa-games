@@ -5,23 +5,27 @@ import ArrayGameEngine from "./arraycomponents/ArrayGameEngine";
 import StringGameEngine from "./stringcomponents/StringGameEngine";
 import * as AppConstants from "./util/appconstants";
 import RelationalGameEngine from "./relationalcomponents/RelationalGameDesign";
+import BooleanGameEngine from "./booleancomponents/BooleanGameDesign";
 // eslint-disable-next-line
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { currentGame: <ArrayGameEngine /> };
+
     this.gameEngines = [
       <ArrayGameEngine />,
-
       <StringGameEngine />,
       <RelationalGameEngine />,
+      <BooleanGameEngine />,
     ];
+    this.state = {
+      currentGame: this.gameEngines[AppConstants.DEFAULTGAMEINDEX],
+    };
     this.handleButton = this.handleButton.bind(this);
   }
 
   handleButton(e) {
     this.setState({ currentGame: this.gameEngines[e.target.id] });
-    console.log("button clicked.", this.gameEngines[e.target.id]);
+    console.log("button clicked", this.gameEngines[e.target.id]);
   }
 
   render() {
@@ -58,7 +62,6 @@ class App extends React.Component {
               <button
                 onClick={this.handleButton}
                 id={AppConstants.BOOLEANGAMEINDEX}
-                disabled={true}
                 className="btn btn-sm btn-primary m-1"
               >
                 Boolean
@@ -76,7 +79,6 @@ class App extends React.Component {
 
           {this.state.currentGame}
 
-          {/* <RelationalGameEngine /> */}
           <footer className="page-footer font-small blue pt-4">
             <div className="footer-copyright text-center py-3">
               {AppConstants.DISCLAIMER}

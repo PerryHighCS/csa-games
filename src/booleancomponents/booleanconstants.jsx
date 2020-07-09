@@ -1,8 +1,8 @@
-export const RELATIONALGAMETITLE = "All-None: A Relational Game";
+export const BOOLEANGAMETITLE = "True-False: A Boolean Game";
 
 // timer values for Disarray Game
-export const MAXTIME = 7; // start timer value
-export const ADDTIME = 2; // bonus for paritally correct answers
+export const MAXTIME = 5; // start timer value
+export const ADDTIME = 0; // bonus for paritally correct answers
 
 export const DEFAULTCOMPOUNDSOPTION = false;
 export const DEFAULTCHALLENGESOPTION = false;

@@ -14,24 +14,24 @@ class Question extends Component {
   }
 
   restart(qf) {
-    console.log("restarting question sequence");
+    //console.log("restarting question sequence");
     const question = qf.getQuestion(this.props);
     this.setState({ question });
   }
 
   nextQuestion() {
     const question = this.props.qf.getQuestion(this.props);
-    console.log("saving question to state", question);
+    //console.log("saving question to state", question);
     this.setState({ question });
   }
 
   updateGrid() {
-    console.log("update grid");
+    //console.log("update grid");
     this.setState({ question: this.state.question });
   }
 
   timeout() {
-    console.log("question timeout");
+    //console.log("question timeout");
     this.state.question.incorrect(true);
   }
 

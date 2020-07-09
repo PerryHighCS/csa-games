@@ -14,7 +14,7 @@ class Timer extends Component {
   }
 
   componentWillUnmount() {
-    console.log("cancelling timer id#:", this.state.id);
+    // console.log("cancelling timer id#:", this.state.id);
     clearTimeout(this.state.id);
   }
 
@@ -30,7 +30,7 @@ class Timer extends Component {
     let id = 0;
     let timerOn = false;
     // currently, timer does not start until first question answered
-    console.log("timer autostart = ", this.props.autoStart);
+    //console.log("timer autostart = ", this.props.autoStart);
     if (this.props.autoStart) {
       id = setTimeout(this.decrementTimer, 1000);
       timerOn = true;
@@ -42,7 +42,7 @@ class Timer extends Component {
       id: id,
     });
 
-    console.log("Timer did mount ");
+    // console.log("Timer did mount ");
   }
 
   decrementTimer = () => {
@@ -53,7 +53,7 @@ class Timer extends Component {
         const id = setTimeout(this.decrementTimer, 1000);
         this.setState({ count: this.state.count - 1, id: id });
       } else {
-        console.log("timer expired id:", this.props.timeout, this.state.id);
+        // console.log("timer expired id:", this.props.timeout, this.state.id);
         this.props.timeout();
         this.setState({ timerOn: false });
       }
@@ -61,10 +61,10 @@ class Timer extends Component {
   };
 
   resetTimer = () => {
-    console.log("restarting timer");
     // do not create multiple timers
     if (!this.state.timerOn) {
       const id = setTimeout(this.decrementTimer, 1000);
+      //  console.log("restarting timer id=", id);
     }
     this.setState({
       count: this.props.maxtime,
@@ -79,7 +79,7 @@ class Timer extends Component {
   };
 
   stopTimer = () => {
-    console.log("cancelling timer ");
+    //console.log("cancelling timer ");
     this.setState({ count: 0 });
   };
 

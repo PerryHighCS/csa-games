@@ -17,7 +17,7 @@ class ScoreKeeper extends Component {
   }
 
   resetGlobalScore() {
-    console.log("resetting global score to 0");
+    //console.log("resetting global score to 0");
     globalScore = 0;
   }
 

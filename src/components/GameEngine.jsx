@@ -41,14 +41,14 @@ class GameEngine extends Component {
     this.nextQuestion = this.nextQuestion.bind(this);
     this.timerTimeOut = this.timerTimeOut.bind(this);
     this.gameOver = this.gameOver.bind(this);
-    console.log("exiting game engine constructor");
+    //console.log("exiting game engine constructor");
   }
 
   playSound = (s) => {
     const sound = new Howl({ src: [s] });
     // is the sound enabled?
     if (this.getOptionValue(AppConstants.SOUNDOPTIONID)) {
-      console.log("playing sound");
+      //console.log("playing sound");
       sound.play();
     }
   };
@@ -81,9 +81,10 @@ class GameEngine extends Component {
   };
 
   gameOver = (timedOut) => {
-    console.log("game over timeout = ", timedOut);
+    //console.log("game over timeout = ", timedOut);
     // user loses this game but switches to new type of game ...
-    // do not allow old score to stay
+    // do not allow old score to stay but continue to display
+    // old score until RESTART or new game is selected
     this.myScoreKeeperRef.current.resetGlobalScore();
     if (!timedOut) this.playSound(wrongAnswer);
     if (this.getOptionValue(AppConstants.TIMEROPTIONID)) {
@@ -92,7 +93,7 @@ class GameEngine extends Component {
   };
 
   nextQuestion = () => {
-    console.log("game engine next question qref=", this.myQuestionRef);
+    //console.log("game engine next question qref=", this.myQuestionRef);
     const qf = new this.props.qf(this.props.options);
     this.myQuestionRef.current.nextQuestion(qf);
     this.setState({ qf: qf });
@@ -100,14 +101,14 @@ class GameEngine extends Component {
 
   incrementScore(increment = 1) {
     this.playSound(rightAnswer);
-    console.log("game engine increment score", this.myScoreKeeperRef);
+    //console.log("game engine increment score", this.myScoreKeeperRef);
     if (this.getOptionValue(AppConstants.TIMEROPTIONID))
       this.myTimerRef.current.resetTimer();
     this.myScoreKeeperRef.current.incrementScore(increment);
   }
 
   timerTimeOut() {
-    console.log("Timer has timed out.");
+    //console.log("Timer has timed out.");
     this.playSound(timerExpired);
     this.myQuestionRef.current.timeout();
     this.myTimerRef.current.stopTimer();
@@ -123,10 +124,10 @@ class GameEngine extends Component {
   }
 
   makeTimer() {
-    console.log(
-      "make timer option =",
-      this.getOptionValue(AppConstants.TIMEROPTIONID)
-    );
+    // console.log(
+    //   "make timer option =",
+    //   this.getOptionValue(AppConstants.TIMEROPTIONID)
+    // );
     if (this.getOptionValue(AppConstants.TIMEROPTIONID)) {
       return (
         <Timer

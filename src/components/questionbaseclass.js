@@ -37,7 +37,7 @@ export class QuestionBaseClass {
       this.buttonStates[row][col] === 1 ? 2 : 3);
     this.buttonStates[row][col] = newState;
 
-    console.log("newStates ", this.buttonStates);
+    //console.log("newStates ", this.buttonStates);
     if (newState === 3) {
       this.incorrect(false);
       return;
@@ -56,7 +56,7 @@ export class QuestionBaseClass {
   };
 
   incorrect(timedOut) {
-    console.log("incorrect timeout = ", timedOut);
+    //console.log("incorrect timeout = ", timedOut);
     for (let row = 0; row < this.buttonStates.length; ++row) {
       for (let col = 0; col < this.buttonStates[0].length; ++col) {
         this.disabled[row][col] = true; // disable all the buttons

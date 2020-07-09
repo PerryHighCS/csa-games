@@ -39,12 +39,9 @@ function stringQuestion1loop(props) {
   if (equalsChar === "=") {
     ++upperBound;
   }
-  let lastIndex = 0;
   for (let i = lowerBound; i < upperBound; i += increment) {
-    lastIndex = i;
+    sq.buttonStates[0][i] = 1;
   }
-  sq.buttonStates[0][lowerBound] = 1;
-  sq.buttonStates[0][lastIndex] = 1;
   return sq;
 }
 

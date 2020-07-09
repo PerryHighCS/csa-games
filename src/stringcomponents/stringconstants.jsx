@@ -1,4 +1,4 @@
-export const STRINGGAMETITLE = "First-Last String-Thing";
+export const STRINGGAMETITLE = "String-Thing";
 
 // word pool for string game
 // you can add and delete words here freely

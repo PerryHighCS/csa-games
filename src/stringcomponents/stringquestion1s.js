@@ -17,8 +17,9 @@ function stringQuestion1s(props) {
   sq.rows = 1;
   const length = currentWord.length;
   const lowerBound = Math.floor(Math.random() * length);
-  sq.buttonStates[0][lowerBound] = 1;
-  sq.buttonStates[0][currentWord.length - 1] = 1;
+  for (let i = lowerBound; i < currentWord.length; ++i) {
+    sq.buttonStates[0][i] = 1;
+  }
 
   sq.text = [`"${currentWord}".substring(${lowerBound});`];
   return sq;

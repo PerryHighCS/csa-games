@@ -63,6 +63,7 @@ class Timer extends Component {
   resetTimer = () => {
     // do not create multiple timers
     if (!this.state.timerOn) {
+      // eslint-disable-next-line
       const id = setTimeout(this.decrementTimer, 1000);
       //  console.log("restarting timer id=", id);
     }

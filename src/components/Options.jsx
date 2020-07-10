@@ -18,7 +18,10 @@ class Options extends Component {
   };
 
   render() {
-    const options = [...this.props.options];
+    let options = [];
+    if (this.props.options) {
+      options = [...this.props.options];
+    }
     // console.log(options);
 
     return (

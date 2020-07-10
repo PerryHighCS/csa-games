@@ -5,7 +5,8 @@ import ArrayGameEngine from "./arraycomponents/ArrayGameEngine";
 import StringGameEngine from "./stringcomponents/StringGameEngine";
 import * as AppConstants from "./util/appconstants";
 import RelationalGameEngine from "./relationalcomponents/RelationalGameDesign";
-import BooleanGameEngine from "./booleancomponents/BooleanGameDesign";
+import BooleanGameEngine from "./booleancomponents/BooleanGameEngine";
+import MixedGameEngine from "./mixedcomponents/MixedGameEngine";
 // eslint-disable-next-line
 class App extends React.Component {
   constructor(props) {
@@ -16,6 +17,7 @@ class App extends React.Component {
       <StringGameEngine />,
       <RelationalGameEngine />,
       <BooleanGameEngine />,
+      <MixedGameEngine />,
     ];
     this.state = {
       currentGame: this.gameEngines[AppConstants.DEFAULTGAMEINDEX],
@@ -69,7 +71,6 @@ class App extends React.Component {
               <button
                 onClick={this.handleButton}
                 id={AppConstants.MIXEDGAMEINDEX}
-                disabled={true}
                 className="btn btn-sm btn-primary m-1"
               >
                 Mixed

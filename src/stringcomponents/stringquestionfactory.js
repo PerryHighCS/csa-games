@@ -6,16 +6,20 @@ import StringQuestion1loop from "./stringquestion1loop";
 
 export class StringQuestionFactory {
   constructor(options) {
-    this.options = [...options];
-    // console.log("qf constructor", this.options);
-    this.loops = false;
-    this.twod = false;
-    for (let option of options) {
-      // console.log("for option:", option.id, option.checked);
-      if (option.id === StringConstants.LOOPSOPTIONID) {
-        this.loops = option.checked;
-        // console.log("changing loops option to ", this.loops);
+    if (options) {
+      this.options = [...options];
+      // console.log("qf constructor", this.options);
+      this.loops = false;
+      for (let option of options) {
+        // console.log("for option:", option.id, option.checked);
+        if (option.id === StringConstants.LOOPSOPTIONID) {
+          this.loops = option.checked;
+          // console.log("changing loops option to ", this.loops);
+        }
       }
+    } else {
+      // mixed game
+      this.loops = true;
     }
   }
 

@@ -9,19 +9,25 @@ import RelationalQchallenge3 from "./relationalqchallenge3";
 
 export class RelationalQuestionFactory {
   constructor(options) {
-    this.options = [...options];
-    // console.log("qf constructor", this.options);
-    this.compound = false;
-    for (let option of options) {
-      // console.log("for option:", option.id, option.checked);
-      if (option.id === RelationalConstants.COMPOUNDOPTIONID) {
-        this.compound = option.checked;
-        console.log("changing compound option to ", this.compound);
+    if (options) {
+      this.options = [...options];
+      // console.log("qf constructor", this.options);
+      this.compound = false;
+      for (let option of options) {
+        // console.log("for option:", option.id, option.checked);
+        if (option.id === RelationalConstants.COMPOUNDOPTIONID) {
+          this.compound = option.checked;
+          console.log("changing compound option to ", this.compound);
+        }
+        if (option.id === RelationalConstants.CHALLENGEOPTIONID) {
+          this.challenge = option.checked;
+          console.log("changing compound option to ", this.challenge);
+        }
       }
-      if (option.id === RelationalConstants.CHALLENGEOPTIONID) {
-        this.challenge = option.checked;
-        console.log("changing compound option to ", this.challenge);
-      }
+    } else {
+      // mixed game
+      this.compound = true;
+      this.challenge = true;
     }
   }
 

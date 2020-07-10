@@ -9,19 +9,24 @@ import BooleanChallengeAnd1 from "./booleanchallengeand1";
 
 export class BooleanQuestionFactory {
   constructor(options) {
-    this.options = [...options];
-    // console.log("qf constructor", this.options);
-    this.compound = false;
-    for (let option of options) {
-      // console.log("for option:", option.id, option.checked);
-      if (option.id === BooleanConstants.COMPOUNDOPTIONID) {
-        this.compound = option.checked;
-        //console.log("changing compound option to", this.compound);
+    if (options) {
+      this.options = [...options];
+      // console.log("qf constructor", this.options);
+      this.compound = false;
+      for (let option of options) {
+        // console.log("for option:", option.id, option.checked);
+        if (option.id === BooleanConstants.COMPOUNDOPTIONID) {
+          this.compound = option.checked;
+          //console.log("changing compound option to", this.compound);
+        }
+        if (option.id === BooleanConstants.CHALLENGEOPTIONID) {
+          this.challenge = option.checked;
+          // console.log("changing compound option to ", this.challenge);
+        }
       }
-      if (option.id === BooleanConstants.CHALLENGEOPTIONID) {
-        this.challenge = option.checked;
-        // console.log("changing compound option to ", this.challenge);
-      }
+    } else {
+      this.compound = true;
+      this.challenge = true;
     }
   }
 

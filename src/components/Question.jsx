@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import AnswerGrid from "../components/AnswerGrid";
-import ArrayQuestion1 from "../arraycomponents/arrayquestion1";
 
 class Question extends Component {
   state = {};

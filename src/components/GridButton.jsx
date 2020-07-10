@@ -22,7 +22,9 @@ class GridButton extends Component {
   }
 
   displayButton() {
-    if (this.props.display) {
+    const display =
+      this.props.display === undefined ? true : this.props.display;
+    if (display) {
       return this.props.displayValue;
     } else {
       return "*";

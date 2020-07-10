@@ -7,20 +7,26 @@ import arrayQuestion2r from "./arrayquestion2r";
 
 export class ArrayQuestionFactory {
   constructor(options) {
-    this.options = [...options];
-    // console.log("qf constructor", this.options);
-    this.loops = false;
-    this.twod = false;
-    for (let option of options) {
-      // console.log("for option:", option.id, option.checked);
-      if (option.id === ArrayConstants.LOOPSOPTIONID) {
-        this.loops = option.checked;
-        // console.log("changing loops option to ", this.loops);
+    if (options) {
+      this.options = [...options];
+      // console.log("qf constructor", this.options);
+      this.loops = false;
+      this.twod = false;
+      for (let option of options) {
+        // console.log("for option:", option.id, option.checked);
+        if (option.id === ArrayConstants.LOOPSOPTIONID) {
+          this.loops = option.checked;
+          // console.log("changing loops option to ", this.loops);
+        }
+        if (option.id === ArrayConstants.TWODOPTIONID) {
+          this.twod = option.checked;
+          // console.log("changing 2D option to ", this.twod);
+        }
       }
-      if (option.id === ArrayConstants.TWODOPTIONID) {
-        this.twod = option.checked;
-        // console.log("changing 2D option to ", this.twod);
-      }
+    } else {
+      // mixed game
+      this.loops = true;
+      this.twod = true;
     }
   }
 

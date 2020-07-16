@@ -40,6 +40,7 @@ class App extends React.Component {
             </h2>
             <div>
               <button
+                autoFocus
                 onClick={this.handleButton}
                 id={AppConstants.STRINGGAMEINDEX}
                 className="btn btn-sm btn-primary m-1"
@@ -61,7 +62,6 @@ class App extends React.Component {
                 Relational
               </button>
               <button
-                autoFocus
                 id={AppConstants.ARRAYGAMEINDEX}
                 onClick={this.handleButton}
                 className="btn btn-sm btn-primary m-1"

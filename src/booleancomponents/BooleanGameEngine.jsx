@@ -61,6 +61,7 @@ class BooleanGameEngine extends Component {
           maxtime={this.state.maxtime}
           addtime={this.state.addtime}
         />
+        <h6>Click true if the code and the display match.</h6>
       </div>
     );
   }

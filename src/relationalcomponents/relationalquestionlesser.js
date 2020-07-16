@@ -34,7 +34,7 @@ function relationalQuestionLesser(props) {
   aq.displayValues[0][0] = "None";
   aq.buttonStates[0][dataSize + 1] = all;
   aq.displayValues[0][dataSize + 1] = "All";
-  aq.text = [`(x <${equalSign} ${op1});`];
+  aq.text = [`(x <${equalSign} ${op1})`];
   return aq;
 }
 

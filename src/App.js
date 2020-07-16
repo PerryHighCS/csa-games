@@ -13,10 +13,10 @@ class App extends React.Component {
     super(props);
 
     this.gameEngines = [
-      <ArrayGameEngine />,
       <StringGameEngine />,
-      <RelationalGameEngine />,
       <BooleanGameEngine />,
+      <RelationalGameEngine />,
+      <ArrayGameEngine />,
       <MixedGameEngine />,
     ];
     this.state = {
@@ -40,19 +40,18 @@ class App extends React.Component {
             </h2>
             <div>
               <button
-                autoFocus
-                id={AppConstants.ARRAYGAMEINDEX}
-                onClick={this.handleButton}
-                className="btn btn-sm btn-primary m-1"
-              >
-                Arrays
-              </button>
-              <button
                 onClick={this.handleButton}
                 id={AppConstants.STRINGGAMEINDEX}
                 className="btn btn-sm btn-primary m-1"
               >
                 Strings
+              </button>
+              <button
+                onClick={this.handleButton}
+                id={AppConstants.BOOLEANGAMEINDEX}
+                className="btn btn-sm btn-primary m-1"
+              >
+                Boolean
               </button>
               <button
                 onClick={this.handleButton}
@@ -62,11 +61,12 @@ class App extends React.Component {
                 Relational
               </button>
               <button
+                autoFocus
+                id={AppConstants.ARRAYGAMEINDEX}
                 onClick={this.handleButton}
-                id={AppConstants.BOOLEANGAMEINDEX}
                 className="btn btn-sm btn-primary m-1"
               >
-                Boolean
+                Arrays
               </button>
               <button
                 onClick={this.handleButton}

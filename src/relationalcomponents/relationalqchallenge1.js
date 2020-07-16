@@ -60,7 +60,7 @@ function relationalQchallenge1(props) {
   rq.displayValues[0][dataSize + 1] = "All";
   rq.text = [
     `(x >${equalSignGT} ${opGT} || ` +
-      `x <${equalSignLT} ${opLT} && !(x >${opNE}));`,
+      `x <${equalSignLT} ${opLT} && !(x >${opNE}))`,
   ];
   return rq;
 }

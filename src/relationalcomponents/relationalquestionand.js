@@ -46,7 +46,7 @@ function relationalQuestionAnd(props) {
   aq.displayValues[0][0] = "None";
   aq.buttonStates[0][dataSize + 1] = all;
   aq.displayValues[0][dataSize + 1] = "All";
-  aq.text = [`((x >${equalSignGT} ${opGT}) && (x <${equalSignLT} ${opLT}));`];
+  aq.text = [`((x >${equalSignGT} ${opGT}) && (x <${equalSignLT} ${opLT}))`];
   return aq;
 }
 

@@ -61,6 +61,7 @@ class RelationalGameEngine extends Component {
           maxtime={this.state.maxtime}
           addtime={this.state.addtime}
         />
+        <h6>Select All, None or only the items that apply.</h6>
       </div>
     );
   }

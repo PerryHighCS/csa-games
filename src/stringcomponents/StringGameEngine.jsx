@@ -50,7 +50,7 @@ class StringGameEngine extends Component {
           maxtime={this.state.maxtime}
           addtime={this.state.addtime}
         />
-        {/* <h6>click only the first and last substring elements</h6> */}
+        <h6>Select all the letters that are part of the substring.</h6>
       </div>
     );
   }

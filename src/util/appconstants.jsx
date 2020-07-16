@@ -2,18 +2,17 @@ export const APPTITLE = "CSA Games Beta 1.3";
 
 export const SOUNDOPTIONID = 1;
 export const TIMEROPTIONID = 2;
-export const DEFAULTSOUNDOPTION = true;
-export const DEFAULTTIMEROPTION = true;
+export const DEFAULTSOUNDOPTION = false;
+export const DEFAULTTIMEROPTION = false;
 
 export const DEFAULTGAMEINDEX = 0;
-export const ARRAYGAMEINDEX = 0;
-export const STRINGGAMEINDEX = 1;
+export const ARRAYGAMEINDEX = 3;
+export const STRINGGAMEINDEX = 0;
 export const RELATIONALGAMEINDEX = 2;
-export const BOOLEANGAMEINDEX = 3;
+export const BOOLEANGAMEINDEX = 1;
 export const MIXEDGAMEINDEX = 4;
 
-export const DISCLAIMER =
-  "copyright: c.sarkar report bugs, questions, comments, suggestions to csarkar373 @gmail.com";
+export const DISCLAIMER = "copyright: c.sarkar";
 
 // following colors are used in both GridButton and Boolean Game
 export const BUTTONCOLORS = [

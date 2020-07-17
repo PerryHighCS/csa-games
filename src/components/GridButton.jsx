@@ -10,7 +10,7 @@ class GridButton extends Component {
   }
 
   getButtonClasses() {
-    const buttonClasses = "btn btn-sm m-2 ";
+    const buttonClasses = "btn btn-sm m-2 shadow-none ";
     //console.log(buttonClasses + buttonColors[this.props.value]);
     return buttonClasses + AppConstants.BUTTONCOLORS[this.props.value];
   }

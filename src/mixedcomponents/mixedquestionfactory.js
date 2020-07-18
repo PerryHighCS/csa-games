@@ -2,6 +2,7 @@ import { ArrayQuestionFactory } from "../arraycomponents/arrayquestionfactory";
 import { BooleanQuestionFactory } from "../booleancomponents/booleanquestionfactory";
 import { RelationalQuestionFactory } from "../relationalcomponents/relationalquestionfactory";
 import { StringQuestionFactory } from "../stringcomponents/stringquestionfactory";
+import { LoopQuestionFactory } from "../loopcomponents/loopquestionfactory";
 
 export class MixedQuestionFactory {
   constructor(options) {
@@ -14,6 +15,7 @@ export class MixedQuestionFactory {
       BooleanQuestionFactory,
       RelationalQuestionFactory,
       StringQuestionFactory,
+      LoopQuestionFactory,
     ];
     const factory = new factories[
       Math.floor(Math.random() * factories.length)

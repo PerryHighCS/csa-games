@@ -89,11 +89,14 @@ class App extends React.Component {
 
           {this.state.currentGame}
 
-          {/* <footer className="page-footer font-small blue pt-4"> */}
-          <div className="footer-copyright text-center py-3">
-            {AppConstants.DISCLAIMER}
-          </div>
-          {/* </footer> */}
+          <footer className="page-footer font-small blue pt-4">
+            <div className="footer-copyright text-center py-3">
+              {AppConstants.DISCLAIMER}
+              <a href="https://sites.google.com/view/codinggames/home">
+                click here for more games
+              </a>
+            </div>
+          </footer>
         </div>
       </div>
     );

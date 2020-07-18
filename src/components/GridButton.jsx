@@ -10,7 +10,8 @@ class GridButton extends Component {
   }
 
   getButtonClasses() {
-    const buttonClasses = "btn btn-sm m-2 shadow-none ";
+    //bug fix 7/17/20: added shadow-none to remove focus when clicked
+    const buttonClasses = "btn btn-sm m-2 shadow-none  ";
     //console.log(buttonClasses + buttonColors[this.props.value]);
     return buttonClasses + AppConstants.BUTTONCOLORS[this.props.value];
   }
@@ -38,7 +39,7 @@ class GridButton extends Component {
         key={this.props.id}
         disabled={this.props.disabled}
         className={this.getButtonClasses()}
-        /* className={"btn btn-sm m-2 btn-primary"} */
+        /* className={"btn btn-sm m-2 btn-primary "} */
         onClick={() => this.buttonClicked()}
       >
         {this.displayButton()}

@@ -7,12 +7,14 @@ import * as AppConstants from "./util/appconstants";
 import RelationalGameEngine from "./relationalcomponents/RelationalGameDesign";
 import BooleanGameEngine from "./booleancomponents/BooleanGameEngine";
 import MixedGameEngine from "./mixedcomponents/MixedGameEngine";
+import LoopGameEngine from "./loopcomponents/LoopGameEngine";
 // eslint-disable-next-line
 class App extends React.Component {
   constructor(props) {
     super(props);
 
     this.gameEngines = [
+      <LoopGameEngine />,
       <StringGameEngine />,
       <BooleanGameEngine />,
       <RelationalGameEngine />,
@@ -41,6 +43,13 @@ class App extends React.Component {
             <div>
               <button
                 autoFocus
+                onClick={this.handleButton}
+                id={AppConstants.LOOPGAMEINDEX}
+                className="btn btn-sm btn-primary m-1"
+              >
+                Loops
+              </button>
+              <button
                 onClick={this.handleButton}
                 id={AppConstants.STRINGGAMEINDEX}
                 className="btn btn-sm btn-primary m-1"
@@ -80,11 +89,11 @@ class App extends React.Component {
 
           {this.state.currentGame}
 
-          <footer className="page-footer font-small blue pt-4">
-            <div className="footer-copyright text-center py-3">
-              {AppConstants.DISCLAIMER}
-            </div>
-          </footer>
+          {/* <footer className="page-footer font-small blue pt-4"> */}
+          <div className="footer-copyright text-center py-3">
+            {AppConstants.DISCLAIMER}
+          </div>
+          {/* </footer> */}
         </div>
       </div>
     );

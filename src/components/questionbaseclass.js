@@ -25,7 +25,8 @@ export class QuestionBaseClass {
   }
 
   randomIncrementOrDecrement() {
-    const temp = [1, 1, 1, 2, 2, 3]; // 1 = 50%, 2 = 33%, 3 = 17%
+    // determine probability distribution
+    const temp = [1, 1, 1, 1, 1, 2, 2, 2, 3];
     return temp[Math.floor(Math.random() * temp.length)];
   }
 

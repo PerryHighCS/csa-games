@@ -31,8 +31,8 @@ function arrayQuestion2r(props) {
       upperBoundRow +
       "; r+=" +
       incrementRow +
-      ")",
-    "for(int c=" +
+      ") {",
+    "   for(int c=" +
       lowerBoundCol +
       "; c <" +
       equalsCharCol +
@@ -40,8 +40,10 @@ function arrayQuestion2r(props) {
       upperBoundCol +
       "; c+=" +
       incrementCol +
-      ")",
-    "d[r][c];",
+      ") {",
+    "      d[r][c];",
+    "   }",
+    "}",
   ];
   if (equalsCharRow === "=") {
     ++upperBoundRow;

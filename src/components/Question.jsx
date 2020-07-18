@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import AnswerGrid from "../components/AnswerGrid";
+import "../css/code.css";
 
 class Question extends Component {
   state = {};
@@ -38,7 +39,9 @@ class Question extends Component {
     // console.log("question rerender ", this.state.question);
     return (
       <div>
-        {this.state.question.displayQuestion()}
+        <div className={"codelines"}>
+          {this.state.question.displayQuestion()}
+        </div>
         <AnswerGrid
           display={this.props.labels}
           onClick={this.state.question.handleButton}

@@ -1,38 +1,32 @@
 import QuestionBaseClass from "../components/questionbaseclass";
 
-function loopQuestion1(props) {
+function loopQuestionDo(props) {
   // question will have 1 row and 8 columns
   const lq = new QuestionBaseClass(props, 1, 8);
-  //console.log("array question base class", lq);
+  console.log("loop question base class", lq);
   lq.pointValue = 1;
   lq.rows = 1;
   // increment is 1,2 or 3
-  const increment = lq.randomIncrementOrDecrement();
   const lowerBound = Math.floor(Math.random() * 4);
   let upperBound = Math.floor(Math.random() * (8 - lowerBound)) + lowerBound;
   const equalsChar = Math.random() > 0.5 ? "=" : "";
   lq.text = [
-    "for(int i=" +
-      lowerBound +
-      "; i <" +
-      equalsChar +
-      " " +
-      upperBound +
-      "; i+=" +
-      increment +
-      ") {",
+    "int i=" + lowerBound + ";",
+    "do {",
     '   System.out.println("Hello!");',
-    "}",
+    "} while (++i <" + equalsChar + " " + upperBound + ");",
   ];
   if (equalsChar === "=") {
     ++upperBound;
   }
-  let index = 0;
-  for (let i = lowerBound; i < upperBound; i += increment) {
-    ++index;
-  }
-  lq.buttonStates[0][index] = 1;
+  let index = lowerBound;
+  let counter = 0;
+  do {
+    ++counter;
+    console.log("counter = ", counter);
+  } while (++index < upperBound);
+  lq.buttonStates[0][counter] = 1;
   return lq;
 }
 
-export default loopQuestion1;
+export default loopQuestionDo;

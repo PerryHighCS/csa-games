@@ -63,7 +63,11 @@ function booleanBasicAnd(props) {
   bq.displayValues[0][0] = "true";
   bq.buttonStates[0][1] = no;
   bq.displayValues[0][1] = "false";
-  const button = <button className={"btn " + color}>{randomNumber}</button>;
+  const button = (
+    <div className={"centered"}>
+      <button className={"btn " + color}>{randomNumber}</button>
+    </div>
+  );
   bq.text = [
     button,
     `(${notColor}${AppConstants.COLORNAMES[displayColorIndex]} && ${notNumber}${displayNumber})`,

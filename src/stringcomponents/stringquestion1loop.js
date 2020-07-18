@@ -33,8 +33,9 @@ function stringQuestion1loop(props) {
       upperBound +
       "; i+=" +
       increment +
-      ")",
-    "s += word.substring(i, i+1); ",
+      ") {",
+    "   s += word.substring(i, i+1); ",
+    "}",
   ];
   if (equalsChar === "=") {
     ++upperBound;

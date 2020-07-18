@@ -20,8 +20,9 @@ function loopQuestion1b(props) {
       lowerBound +
       "; i-=" +
       decrement +
-      ")",
-    'System.out.println("Hello");',
+      ") {",
+    '   System.out.println("Hello");',
+    "}",
   ];
   if (equalsChar === "=") {
     --lowerBound;

@@ -21,8 +21,9 @@ function arrayQuestion1r(props) {
       upperBound +
       "; i+=" +
       increment +
-      ")",
-    "f[i];",
+      ") {",
+    "   f[i];",
+    "}",
   ];
   if (equalsChar === "=") {
     ++upperBound;

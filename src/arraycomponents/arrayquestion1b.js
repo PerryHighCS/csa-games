@@ -21,8 +21,9 @@ function arrayQuestion1b(props) {
       lowerBound +
       "; i-=" +
       decrement +
-      ")",
-    "b[i];",
+      ") {",
+    "   b[i];",
+    "}",
   ];
   if (equalsChar === "=") {
     --lowerBound;

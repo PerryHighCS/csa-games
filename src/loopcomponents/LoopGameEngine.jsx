@@ -10,6 +10,11 @@ const LOOPOPTIONS = [
     checked: LoopConstants.DEFAULTBACKWARDSSOPTION,
   },
   {
+    id: LoopConstants.DOOPTIONID,
+    label: "Do While",
+    checked: LoopConstants.DEFAULTDOOPTION,
+  },
+  {
     id: LoopConstants.NESTEDOPTIONID,
     label: "Nested",
     checked: LoopConstants.DEFAULTNESTEDOPTION,
@@ -47,7 +52,7 @@ class LoopGameEngine extends Component {
           maxtime={this.state.maxtime}
           addtime={this.state.addtime}
         />
-        <h6>How many times will the loops execute?</h6>
+        <h6>How many times will the loop execute?</h6>
       </div>
     );
   }

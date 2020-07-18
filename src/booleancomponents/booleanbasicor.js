@@ -2,6 +2,7 @@ import React from "react";
 import QuestionBaseClass from "../components/questionbaseclass";
 import "bootstrap/dist/css/bootstrap.css";
 import * as AppConstants from "../util/appconstants";
+import "../css/code.css";
 
 function booleanBasicOr(props) {
   // question will have 1 row and 2 columns for yes/no
@@ -61,7 +62,11 @@ function booleanBasicOr(props) {
   bq.displayValues[0][0] = "true";
   bq.buttonStates[0][1] = no;
   bq.displayValues[0][1] = "false";
-  const button = <button className={"btn " + color}>{randomNumber}</button>;
+  const button = (
+    <div className={"centered"}>
+      <button className={"btn " + color}>{randomNumber}</button>
+    </div>
+  );
   bq.text = [
     button,
     `(${notColor}${AppConstants.COLORNAMES[displayColorIndex]} || ${notNumber}${displayNumber})`,

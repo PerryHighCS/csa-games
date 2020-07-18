@@ -31,8 +31,8 @@ function loopQuestionNested(props) {
         upperBoundOuter +
         "; i+=" +
         incrementOuter +
-        ")",
-      "for(int j=" +
+        ") {",
+      "   for(int j=" +
         lowerBoundInner +
         "; j <" +
         equalsCharInner +
@@ -40,8 +40,10 @@ function loopQuestionNested(props) {
         upperBoundInner +
         "; j+=" +
         incrementInner +
-        ")",
-      'System.out.println("Hello");',
+        ") {",
+      '      System.out.println("Hello");',
+      "   }",
+      "}",
     ];
     if (equalsCharOuter === "=") {
       ++upperBoundOuter;

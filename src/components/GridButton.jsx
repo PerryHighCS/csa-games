@@ -38,6 +38,7 @@ class GridButton extends Component {
     return (
       <button
         key={this.props.id}
+        tabIndex={-1}
         disabled={this.props.disabled}
         className={this.getButtonClasses()}
         /* className={"btn btn-sm m-2 btn-primary "} */

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import * as AppConstants from "../util/appconstants";
+import "../css/gridbutton.css";
 
 class GridButton extends Component {
   state = {};

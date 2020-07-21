@@ -41,7 +41,7 @@ function arrayQuestion2r(props) {
       "; c+=" +
       incrementCol +
       ") {",
-    "      d[r][c];",
+    "      System.out.print( a[r][c] );",
     "   }",
     "}",
   ];

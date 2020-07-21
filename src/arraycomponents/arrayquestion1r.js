@@ -22,7 +22,7 @@ function arrayQuestion1r(props) {
       "; i+=" +
       increment +
       ") {",
-    "   f[i];",
+    "   System.out.print( a[i] );",
     "}",
   ];
   if (equalsChar === "=") {

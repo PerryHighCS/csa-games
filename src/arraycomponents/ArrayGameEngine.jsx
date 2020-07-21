@@ -68,7 +68,7 @@ class ArrayGameEngine extends Component {
           maxtime={this.state.maxtime}
           addtime={this.state.addtime}
         />
-        <h6>Click only on the array cells shown in the code.</h6>
+        <h6>Click only on the array cells that are printed.</h6>
       </div>
     );
   }

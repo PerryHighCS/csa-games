@@ -84,8 +84,18 @@ export class QuestionBaseClass {
         }
       }
     }
+    this.clearButtonStates();
     //console.log("all correct ");
+
     return true;
+  }
+
+  clearButtonStates() {
+    for (let row = 0; row < this.buttonStates.length; ++row) {
+      for (let col = 0; col < this.buttonStates[0].length; ++col) {
+        this.buttonStates[row][col] = 0;
+      }
+    }
   }
 
   displayQuestion() {

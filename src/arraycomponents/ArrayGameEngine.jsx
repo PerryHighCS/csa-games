@@ -48,7 +48,7 @@ class ArrayGameEngine extends Component {
         this.setState({ labels, options });
         return;
       default:
-        console.log("option id in array game engine =", id);
+        //console.log("option id in array game engine =", id);
         break;
     }
     this.setState({ options });

@@ -40,7 +40,7 @@ class ArrayGameEngine extends Component {
 
   handleOptions = (options, id, checked) => {
     console.log("options have changed ", options, id, checked);
-    // timer and label options are handled here.
+    // label option is handled here.
     // other options are used by the question factory
     switch (id) {
       case ArrayConstants.LABELSOPTIONID:
@@ -48,7 +48,7 @@ class ArrayGameEngine extends Component {
         this.setState({ labels, options });
         return;
       default:
-        console.log("unknown option in array game engine");
+        console.log("option id in array game engine =", id);
         break;
     }
     this.setState({ options });

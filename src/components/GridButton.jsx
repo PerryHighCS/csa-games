@@ -19,7 +19,7 @@ class GridButton extends Component {
 
   buttonClicked() {
     const { row, col } = this.state;
-    console.log("button clicked: props ", this.props);
+    //console.log("button clicked: props ", this.props);
     this.props.onClick(row, col);
   }
 

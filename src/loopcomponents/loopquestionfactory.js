@@ -38,7 +38,7 @@ export class LoopQuestionFactory {
   getQuestion(props) {
     //console.log("getquestion props", props);
 
-    console.log("getQuestion backwards nested", this.backwards, this.nested);
+    //console.log("getQuestion backwards nested", this.backwards, this.nested);
 
     let questionTypes = [loopQuestion1];
 

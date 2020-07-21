@@ -31,7 +31,7 @@ export class QuestionBaseClass {
   }
 
   handleButton = (row, col) => {
-    console.log("button clicked: row col ", row, col, this);
+    //console.log("button clicked: row col ", row, col, this);
     //let question = { ...this.state.question };
     // right choice made = 2, wrong choice made = 3
     const newState = (this.buttonStates[row][col] =
@@ -44,7 +44,7 @@ export class QuestionBaseClass {
       return;
     }
     if (this.allCorrect()) {
-      console.log("all correct getting next question");
+      //console.log("all correct getting next question");
 
       this.props.incrementScore(this.pointValue);
       this.props.nextQuestion();
@@ -74,7 +74,7 @@ export class QuestionBaseClass {
   }
 
   allCorrect() {
-    console.log("entering allcorrect method");
+    //console.log("entering allcorrect method");
 
     for (let row = 0; row < this.buttonStates.length; ++row) {
       for (let col = 0; col < this.buttonStates[0].length; ++col) {
@@ -84,7 +84,7 @@ export class QuestionBaseClass {
         }
       }
     }
-    console.log("all correct ");
+    //console.log("all correct ");
     return true;
   }
 

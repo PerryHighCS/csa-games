@@ -1,4 +1,4 @@
-export const APPTITLE = "CSA Games Beta 2.3";
+export const APPTITLE = "CSA Games Beta 2.4";
 
 export const SOUNDOPTIONID = 1;
 export const TIMEROPTIONID = 2;
@@ -20,7 +20,7 @@ export const BUTTONCOLORS = [
   "btn-outline-primary", // unselected=false
   // "btn-info",
   "btn-outline-primary", // unselected-true
-  "btn-primary", // selected-true
+  "btn-primary", // selected-true (blue)
   "btn-danger", // selected-false (red)
   "btn-warning", // partially-correct (yellow)
   "btn-success", // green

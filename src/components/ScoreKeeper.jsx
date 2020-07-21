@@ -9,12 +9,20 @@ class ScoreKeeper extends Component {
   constructor(props) {
     super(props);
     this.state = { score: globalScore };
+    this.myButtonRef = React.createRef();
   }
 
   incrementScore(increment = 1) {
     ++globalScore;
     this.setState({ score: globalScore });
+    //console.log("button = ", this.myButtonRef.current);
+    // move focus to scoreboard
+    this.myButtonRef.current.click();
   }
+
+  handleClick = () => {
+    //console.log("score button was clicked.");
+  };
 
   resetGlobalScore() {
     //console.log("resetting global score to 0");
@@ -33,7 +41,12 @@ class ScoreKeeper extends Component {
   render() {
     return (
       <div>
-        <button className="btn btn-outline-primary btn-lg m-2">
+        <button
+          autoFocus
+          ref={this.myButtonRef}
+          onClick={this.handleClick}
+          className="btn btn-outline-primary btn-lg m-2"
+        >
           Score = {this.state.score}
         </button>
       </div>

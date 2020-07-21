@@ -20,7 +20,7 @@ class ArrayGameEngine extends Component {
     super(props);
 
     let labels = this.getLabelChecked();
-    console.log("array game constructor labels=", labels);
+    //console.log("array game constructor labels=", labels);
     this.state = {
       options: ARRAYOPTIONS,
       qf: ArrayQuestionFactory,
@@ -39,7 +39,7 @@ class ArrayGameEngine extends Component {
   }
 
   handleOptions = (options, id, checked) => {
-    console.log("options have changed ", options, id, checked);
+    //console.log("options have changed ", options, id, checked);
     // label option is handled here.
     // other options are used by the question factory
     switch (id) {

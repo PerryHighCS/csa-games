@@ -80,7 +80,7 @@ export class QuestionBaseClass {
     for (let row = 0; row < this.buttonStates.length; ++row) {
       for (let col = 0; col < this.buttonStates[0].length; ++col) {
         if (this.buttonStates[row][col] === 1) {
-          console.log("not all correct yet");
+          //console.log("not all correct yet");
           return false;
         }
       }

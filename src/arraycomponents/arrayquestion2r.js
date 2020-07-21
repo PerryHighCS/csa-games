@@ -7,10 +7,10 @@ function arrayQuestion2r(props) {
   aq.pointValue = 3;
   aq.rows = 3;
   // increment is 1 or 2
-  const incrementRow = aq.randomIncrementOrDecrement();
-  const lowerBoundRow = Math.floor(Math.random() * 3);
+  const incrementRow = 1;
+  const lowerBoundRow = Math.floor(Math.random() * 2);
   let upperBoundRow =
-    Math.floor(Math.random() * (2 - lowerBoundRow)) + lowerBoundRow;
+    Math.floor(Math.random() * (3 - lowerBoundRow)) + lowerBoundRow;
 
   const incrementCol = aq.randomIncrementOrDecrement();
   const lowerBoundCol = Math.floor(Math.random() * 4);

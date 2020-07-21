@@ -29,7 +29,7 @@ class App extends React.Component {
 
   handleButton(e) {
     this.setState({ currentGame: this.gameEngines[e.target.id] });
-    console.log("button clicked", this.gameEngines[e.target.id]);
+    //console.log("button clicked", this.gameEngines[e.target.id]);
   }
 
   render() {

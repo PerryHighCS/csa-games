@@ -47,6 +47,7 @@ export class QuestionBaseClass {
       //console.log("all correct getting next question");
 
       this.props.incrementScore(this.pointValue);
+      this.clearButtonStates();
       this.props.nextQuestion();
       return; // do not update grid if all correct
       // console.log("got new question", question);
@@ -84,7 +85,7 @@ export class QuestionBaseClass {
         }
       }
     }
-    this.clearButtonStates();
+
     //console.log("all correct ");
 
     return true;

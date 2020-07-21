@@ -37,6 +37,7 @@ export class QuestionBaseClass {
     const newState = (this.buttonStates[row][col] =
       this.buttonStates[row][col] === 1 ? 2 : 3);
     this.buttonStates[row][col] = newState;
+    this.disabled[row][col] = true;
 
     //console.log("newStates ", this.buttonStates);
     if (newState === 3) {

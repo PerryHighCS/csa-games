@@ -16,12 +16,14 @@ class ScoreKeeper extends Component {
     ++globalScore;
     this.setState({ score: globalScore });
     //console.log("button = ", this.myButtonRef.current);
-    // move focus to scoreboard
+
     this.myButtonRef.current.click();
   }
 
   handleClick = () => {
-    //console.log("score button was clicked.");
+    console.log("score button was clicked.");
+    // move focus to scoreboard (and away from answer buttons)
+    this.myButtonRef.current.focus();
   };
 
   resetGlobalScore() {

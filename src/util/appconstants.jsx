@@ -17,9 +17,9 @@ export const DISCLAIMER = "License: Creative Commons BY-NC 4.0: c.sarkar. ";
 
 // following colors are used in both GridButton and Boolean Game
 export const BUTTONCOLORS = [
-  "btn-outline-primary", // unselected=false
+  "btn-primary", // unselected=false
   // "btn-info",
-  "btn-outline-primary", // unselected-true
+  "btn-primary", // unselected-true
   "btn-success", // selected-true (blue)
   "btn-danger", // selected-false (red)
   "btn-warning", // partially-correct (yellow)

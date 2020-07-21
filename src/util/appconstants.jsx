@@ -20,7 +20,7 @@ export const BUTTONCOLORS = [
   "btn-outline-primary", // unselected=false
   // "btn-info",
   "btn-outline-primary", // unselected-true
-  "btn-primary", // selected-true (blue)
+  "btn-success", // selected-true (blue)
   "btn-danger", // selected-false (red)
   "btn-warning", // partially-correct (yellow)
   "btn-success", // green

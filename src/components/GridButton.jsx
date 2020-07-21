@@ -12,7 +12,7 @@ class GridButton extends Component {
 
   getButtonClasses() {
     //bug fix 7/17/20: added shadow-none to remove focus when clicked
-    const buttonClasses = "gb btn btn-sm m-2 ";
+    const buttonClasses = "gb btn btn-sm ";
     //console.log(buttonClasses + buttonColors[this.props.value]);
     return buttonClasses + AppConstants.BUTTONCOLORS[this.props.value];
   }

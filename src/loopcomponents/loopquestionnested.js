@@ -3,7 +3,7 @@ import QuestionBaseClass from "../components/questionbaseclass";
 function loopQuestionNested(props) {
   console.log("loop question nested");
   // question will have 1 row and 10 columns
-  const lq = new QuestionBaseClass(props, 1, 10);
+  const lq = new QuestionBaseClass(props, 1, 8);
 
   lq.pointValue = 3;
   lq.rows = 1;
@@ -58,7 +58,7 @@ function loopQuestionNested(props) {
         ++index;
       }
     }
-  } while (index > 9);
+  } while (index > 7);
 
   console.log("button states, right answer", lq.buttonStates, index);
   lq.buttonStates[0][index] = 1;

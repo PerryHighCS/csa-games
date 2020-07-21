@@ -1,8 +1,8 @@
 import QuestionBaseClass from "../components/questionbaseclass";
 
 function relationalQuestionOr(props) {
-  // dataSize currently between 2 and 6, inclusive
-  const dataSize = Math.floor(Math.random() * 5) + 2;
+  // dataSize currently between 2 and 4, inclusive
+  const dataSize = Math.floor(Math.random() * 3) + 2;
   //const dataSize = 6; // debug
   // question will have 1 row and dataSize + 2 columns for All/None
   const aq = new QuestionBaseClass(props, 1, dataSize + 2);

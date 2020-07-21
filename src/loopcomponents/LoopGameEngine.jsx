@@ -52,7 +52,7 @@ class LoopGameEngine extends Component {
           maxtime={this.state.maxtime}
           addtime={this.state.addtime}
         />
-        <h6>How many times will the loop execute?</h6>
+        <h6>How many times will "Hello" be printed?</h6>
       </div>
     );
   }

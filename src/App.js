@@ -14,10 +14,10 @@ class App extends React.Component {
     super(props);
 
     this.gameEngines = [
-      <LoopGameEngine />,
       <StringGameEngine />,
-      <BooleanGameEngine />,
       <RelationalGameEngine />,
+      <BooleanGameEngine />,
+      <LoopGameEngine />,
       <ArrayGameEngine />,
       <MixedGameEngine />,
     ];
@@ -42,19 +42,18 @@ class App extends React.Component {
             </h2>
             <div>
               <button
-                autoFocus
-                onClick={this.handleButton}
-                id={AppConstants.LOOPGAMEINDEX}
-                className="btn btn-sm btn-primary m-1"
-              >
-                Loops
-              </button>
-              <button
                 onClick={this.handleButton}
                 id={AppConstants.STRINGGAMEINDEX}
                 className="btn btn-sm btn-primary m-1"
               >
                 Strings
+              </button>
+              <button
+                onClick={this.handleButton}
+                id={AppConstants.RELATIONALGAMEINDEX}
+                className="btn btn-sm btn-primary m-1"
+              >
+                Relational
               </button>
               <button
                 onClick={this.handleButton}
@@ -64,11 +63,12 @@ class App extends React.Component {
                 Boolean
               </button>
               <button
+                autoFocus
                 onClick={this.handleButton}
-                id={AppConstants.RELATIONALGAMEINDEX}
+                id={AppConstants.LOOPGAMEINDEX}
                 className="btn btn-sm btn-primary m-1"
               >
-                Relational
+                Loops
               </button>
               <button
                 id={AppConstants.ARRAYGAMEINDEX}
@@ -93,7 +93,7 @@ class App extends React.Component {
             <div className="footer-copyright text-center py-3">
               {AppConstants.DISCLAIMER}
               <a href="https://sites.google.com/view/codinggames/home">
-                click here for more games
+                https://sites.google.com/view/codinggames/home
               </a>
             </div>
           </footer>

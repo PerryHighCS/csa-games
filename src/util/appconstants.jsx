@@ -1,4 +1,4 @@
-export const APPTITLE = "CSA Games Beta 2.8";
+export const APPTITLE = "CSA Games Beta 3.0";
 
 export const SOUNDOPTIONID = 1;
 export const TIMEROPTIONID = 2;
@@ -6,14 +6,15 @@ export const DEFAULTSOUNDOPTION = false;
 export const DEFAULTTIMEROPTION = false;
 
 export const DEFAULTGAMEINDEX = 0;
-export const LOOPGAMEINDEX = 0;
+export const LOOPGAMEINDEX = 3;
 export const ARRAYGAMEINDEX = 4;
-export const STRINGGAMEINDEX = 1;
-export const RELATIONALGAMEINDEX = 3;
+export const STRINGGAMEINDEX = 0;
+export const RELATIONALGAMEINDEX = 1;
 export const BOOLEANGAMEINDEX = 2;
 export const MIXEDGAMEINDEX = 5;
 
-export const DISCLAIMER = "License: Creative Commons BY-NC 4.0: c.sarkar. ";
+export const DISCLAIMER =
+  "License: Creative Commons BY-NC 4.0: c.sarkar. For more games go to -->";
 
 // following colors are used in both GridButton and Boolean Game
 export const BUTTONCOLORS = [

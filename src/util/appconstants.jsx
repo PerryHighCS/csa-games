@@ -17,11 +17,12 @@ export const DISCLAIMER =
   "License: Creative Commons BY-NC 4.0: c.sarkar. For more games go to -->";
 
 // following colors are used in both GridButton and Boolean Game
+// any changes here must also be reflected in the color names array, below.
 export const BUTTONCOLORS = [
-  "btn-primary", // unselected=false
+  "btn-primary", // unselected=false (blue)
   // "btn-info",
   "btn-primary", // unselected-true
-  "btn-success", // selected-true (blue)
+  "btn-success", // selected-true (green)
   "btn-danger", // selected-false (red)
   "btn-warning", // partially-correct (yellow)
   "btn-success", // green
@@ -29,11 +30,11 @@ export const BUTTONCOLORS = [
   "btn-info", // light blue
 ];
 
-export const USABLECOLORS = 5; // must be kept in synch with array,below
+export const USABLECOLORS = 5; // must be kept in synch with arrays,below and above
 export const COLORNAMES = [
-  "white",
-  "white",
-  "blue", // 1
+  "blue",
+  "blue",
+  "green", // 1
   "red",
   "yellow",
   "green",

@@ -1,4 +1,4 @@
-export const APPTITLE = "CSA Games Beta 3.1";
+export const APPTITLE = "CSA Games V1.0";
 
 export const SOUNDOPTIONID = 1;
 export const TIMEROPTIONID = 2;

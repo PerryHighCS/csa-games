@@ -43,7 +43,7 @@ class ScoreKeeper extends Component {
     return (
       <div>
         <button
-          autoFocus
+          // autoFocus
           ref={this.myButtonRef}
           onClick={this.handleClick}
           className="btn btn-outline-primary btn-lg m-2"

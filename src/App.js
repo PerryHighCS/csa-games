@@ -63,7 +63,7 @@ class App extends React.Component {
                 Boolean
               </button>
               <button
-                autoFocus
+                // autoFocus
                 onClick={this.handleButton}
                 id={AppConstants.LOOPGAMEINDEX}
                 className="btn btn-sm btn-primary m-1"

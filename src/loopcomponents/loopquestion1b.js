@@ -9,8 +9,9 @@ function loopQuestion1b(props) {
   const decrement = aq.randomIncrementOrDecrement();
   let lowerBound = Math.floor(Math.random() * 4);
   const upperBound = Math.floor(Math.random() * (8 - lowerBound)) + lowerBound;
-  const equalsChar = Math.random() > 0.5 ? "=" : "";
-
+  let equalsChar = Math.random() > 0.5 ? "=" : "";
+  // bug fix 11/26/2020 make sure loop does not run 8 times
+  if (lowerBound === 0 && upperBound === 7) equalsChar = "";
   aq.text = [
     "for(int i=" +
       upperBound +

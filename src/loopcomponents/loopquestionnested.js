@@ -22,6 +22,10 @@ function loopQuestionNested(props) {
 
     let equalsCharOuter = Math.random() > 0.5 ? "=" : "";
     let equalsCharInner = Math.random() > 0.5 ? "=" : "";
+    // bug fix 11/26/2020 make sure loop does not run 8 times
+    if (lowerBoundInner === 0 && upperBoundInner === 7) equalsCharInner = "";
+    // bug fix 11/26/2020 make sure loop does not run 8 times
+    if (lowerBoundOuter === 0 && upperBoundOuter === 7) equalsCharOuter = "";
     lq.text = [
       "for(int i=" +
         lowerBoundOuter +

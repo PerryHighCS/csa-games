@@ -1,9 +1,10 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import App from './App';
+import { APPTITLE } from './util/appconstants';
 
-test('renders learn react link', () => {
+test('renders app title', () => {
   const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const titleElement = getByText(APPTITLE);
+  expect(titleElement).toBeInTheDocument();
 });
